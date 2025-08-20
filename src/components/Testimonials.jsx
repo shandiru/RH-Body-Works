@@ -69,7 +69,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-center text-3xl font-extrabold tracking-[0.2em] text-slate-900 sm:text-3xl uppercase">
+        <h2 className="text-center text-2xl font-extrabold tracking-[0.2em] text-slate-900 sm:text-4xl uppercase">
           What Customers Say
           <br />
           About <span className="text-blue-600">{brand}</span>
