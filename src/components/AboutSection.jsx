@@ -3,20 +3,20 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <section className="bg-white " id="about">
+    <section className="bg-white" id="about">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
-        {/* LEFT: single image + blue award badge */}
+        {/* LEFT: image + badge */}
         <div className="relative">
           <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-100">
             <img
-              src="hero.jpg"   /* <- replace with your image */
+              src="hero.jpg"
               alt="Our showroom"
               className="h-80 w-full object-cover sm:h-96"
               loading="lazy"
             />
           </div>
 
-          {/* Blue award badge */}
+          {/* Blue badge */}
           <div className="absolute -right-6 top-6 grid h-28 w-28 place-items-center rounded-full bg-white shadow-xl">
             <div className="grid h-24 w-24 place-items-center rounded-full border-[6px] border-blue-500">
               <div className="px-2 text-center leading-tight">
@@ -31,29 +31,30 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* RIGHT: content */}
+        {/* RIGHT: text content */}
         <div className="flex flex-col justify-center">
-          {/* Eyebrow */}
-          <div className="mb-3 flex items-center gap-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
+          {/* Eyebrow with blue lines on both sides */}
+          <div className="mb-5 flex items-center justify-center gap-3 lg:justify-start">
+            <span className="h-px flex-1 max-w-[50px] bg-blue-500 opacity-50" />
+            <span className="text-xs font-bold uppercase tracking-widest text-blue-600 text-center whitespace-nowrap">
               About Our Company
             </span>
-            <span className="h-[2px] w-10 bg-blue-500" />
+            <span className="h-px flex-1 max-w-[50px] bg-blue-500 opacity-50" />
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold leading-tight text-slate-900 text-center lg:text-left sm:text-4xl">
             Welcome to Our Company
           </h2>
 
           {/* Subcopy */}
-          <p className="mt-4 max-w-xl text-slate-600">
+          <p className="mt-4 max-w-xl text-slate-600 text-center lg:text-left">
             We deliver transparent service, consistent quality, and a smooth
             customer experience from enquiry to handover. Our team focuses on
             reliability, safety, and long-term value.
           </p>
 
-          {/* Feature list (2 cols) */}
+          {/* Feature list */}
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[
               'We’re Here When You Need Us',
@@ -84,17 +85,16 @@ export default function AboutSection() {
           {/* Divider */}
           <div className="mt-6 h-px w-full bg-slate-200" />
 
-          {/* CTA row (icons fixed to blue + match screenshot) */}
+          {/* CTA row */}
           <div className="mt-6 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
             <a
-              href="/about"
+              href="#about"
               className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
             >
               Learn More
             </a>
 
             <div className="flex items-center gap-3 text-sm">
-              {/* Blue circular chat icon with three dots */}
               <span className="inline-grid h-10 w-10 place-items-center rounded-full bg-white ring-2 ring-blue-400">
                 <svg
                   viewBox="0 0 24 24"
@@ -104,13 +104,11 @@ export default function AboutSection() {
                   strokeWidth="2"
                   aria-hidden="true"
                 >
-                  {/* chat bubble */}
                   <path
                     d="M21 12a7 7 0 0 1-7 7H9l-4 3v-3H7a7 7 0 0 1-7-7V9a7 7 0 0 1 7-7h7a7 7 0 0 1 7 7v3Z"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  {/* three dots */}
                   <circle cx="10" cy="12" r="1.2" className="fill-blue-600 stroke-none" />
                   <circle cx="14" cy="12" r="1.2" className="fill-blue-600 stroke-none" />
                   <circle cx="18" cy="12" r="1.2" className="fill-blue-600 stroke-none" />
@@ -120,10 +118,9 @@ export default function AboutSection() {
               <div>
                 <div className="text-slate-700">Have queries? Click below link</div>
                 <a
-                  href="/faqs"
+                  href="#faqs"
                   className="group inline-flex items-center gap-2 font-semibold text-blue-700 hover:text-blue-800"
                 >
-                  {/* Left pointing indicator (arrow), blue */}
                   <svg
                     viewBox="0 0 24 24"
                     className="h-4 w-4 text-blue-600 transition-transform group-hover:-translate-x-0.5"
