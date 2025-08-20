@@ -49,7 +49,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-16 px-4" id="services">
       <div className="mx-auto max-w-7xl">
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-3">

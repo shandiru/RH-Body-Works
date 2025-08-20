@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-white " id="about">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
         {/* LEFT: single image + blue award badge */}
         <div className="relative">
