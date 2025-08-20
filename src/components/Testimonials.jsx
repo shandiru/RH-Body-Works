@@ -58,20 +58,30 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
   return (
     <section className="relative overflow-hidden bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        {/* Heading */}
+
+        {/* Small Heading with blue lines on both sides */}
+        <div className="mb-3 flex items-center justify-center gap-3">
+          <span className="h-px flex-1 max-w-[40px] bg-blue-500 opacity-60" />
+          <h3 className="text-blue-600 font-bold text-xs tracking-widest uppercase">
+            Review
+          </h3>
+          <span className="h-px flex-1 max-w-[40px] bg-blue-500 opacity-60" />
+        </div>
+
+        {/* Main Heading */}
         <h2 className="text-center text-3xl font-extrabold tracking-[0.2em] text-slate-900 sm:text-4xl uppercase">
-          What Customer Say
+          What Customers Say
           <br />
           About <span className="text-blue-600">{brand}</span>
         </h2>
 
-        {/* Card (taller version) */}
+        {/* Testimonial Card */}
         <div className="relative mx-auto mt-10 w-full max-w-4xl rounded-xl bg-slate-900 px-6 py-16 md:py-20 text-center text-white shadow-xl sm:px-10 min-h-[260px] sm:min-h-[300px] md:min-h-[340px] flex items-center">
           <p className="mx-auto max-w-3xl text-lg md:text-xl leading-relaxed text-slate-100">
             “{t.quote}”
           </p>
 
-          {/* Avatar overlap */}
+          {/* Avatar */}
           <div className="pointer-events-none absolute left-1/2 top-full -mt-12 md:-mt-14 -translate-x-1/2">
             <img
               src={t.avatar}
@@ -81,7 +91,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
           </div>
         </div>
 
-        {/* Stars, name, role */}
+        {/* Stars, Name, Role */}
         <div className="mt-14 flex flex-col items-center">
           <div className="mb-3 flex gap-1">
             {Array.from({ length: 5 }).map((_, i) => (
