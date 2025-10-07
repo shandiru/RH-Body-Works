@@ -1,86 +1,78 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { FaFacebookF, FaTwitter, FaYoutube, FaChevronDown } from "react-icons/fa";
+import { FiPhone, FiMapPin } from "react-icons/fi";
 
-export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <a href="#" className="text-2xl font-extrabold text-blue-700">
-          Carent
-        </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
-          <a href="#home" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-            Home
-          </a>
-          <a href="#about" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-            About
-          </a>
-          <a href="#services" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-            Services
-          </a>
-         
-          <a href="#contact" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-            Contact
-          </a>
-        </div>
-
-        {/* CTA Button (Desktop) */}
-        <div className="hidden lg:block">
-          <a
-            href="#get-started"
-            className="inline-block rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition"
-          >
-            Get Started
-          </a>
-        </div>
-
-        {/* Hamburger Button */}
-        <button
-          className="lg:hidden inline-flex items-center justify-center p-2 text-slate-700 hover:text-blue-600 focus:outline-none"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
-      </nav>
-
-      {/* Mobile Dropdown */}
-      {mobileOpen && (
-        <div className="lg:hidden border-t border-slate-200 px-4 pb-6">
-          <div className="flex flex-col gap-4 mt-4">
-            <a href="#home" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-              Home
-            </a>
-            <a href="#about" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-              About
-            </a>
-            <a href="#services" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-              Services
-            </a>
-            
-            <a href="#contact" className="text-sm font-semibold text-slate-700 hover:text-blue-600">
-              Contact
-            </a>
-            <a
-              href="#get-started"
-              className="mt-2 inline-block rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition"
-            >
-              Get Started
-            </a>
+    <header className="bg-[#0c0c0c] text-white w-full">
+      {/* Top Bar */}
+      <div className="border-b border-gray-700 text-sm flex flex-col md:flex-row justify-between items-center px-4 md:px-10 py-2 bg-[#0c0c0c]">
+        <div className="flex items-center gap-3 text-gray-300">
+          <span>Follow our socials</span>
+          <div className="flex gap-3 text-white">
+            <FaFacebookF className="hover:text-yellow-500 cursor-pointer" />
+            <FaTwitter className="hover:text-yellow-500 cursor-pointer" />
+            <FaYoutube className="hover:text-yellow-500 cursor-pointer" />
           </div>
         </div>
-      )}
+        <div className="flex items-center gap-5 text-gray-300 mt-2 md:mt-0">
+          <div className="flex items-center gap-1">
+            <FiPhone className="text-yellow-500" /> <span>+123 456 789</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <FiMapPin className="text-yellow-500" /> <span>Prds RD 99 London UK</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navbar */}
+      <nav className="flex justify-between items-center px-4 md:px-10 py-5 bg-[#0c0c0c]">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <div className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center">
+            <span className="w-3 h-3 border-2 border-white rounded-full"></span>
+          </div>
+          <span className="text-xl font-bold tracking-wide">DRIVE</span>
+        </div>
+
+        {/* Menu Items */}
+        <ul className="hidden lg:flex items-center space-x-10 text-gray-200 font-medium">
+          <li className="text-yellow-500">Home</li>
+          <li className="flex items-center gap-1 cursor-pointer hover:text-yellow-500">
+            Pages <FaChevronDown size={12} />
+          </li>
+          <li className="hover:text-yellow-500 cursor-pointer">Services</li>
+          <li className="hover:text-yellow-500 cursor-pointer">Repair</li>
+          <li className="hover:text-yellow-500 cursor-pointer">Performance</li>
+          <li className="hover:text-yellow-500 cursor-pointer">Contact</li>
+        </ul>
+
+        {/* Mobile Toggle */}
+        <button
+          className="lg:hidden flex flex-col gap-1"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="w-6 h-[2px] bg-white"></span>
+          <span className="w-6 h-[2px] bg-white"></span>
+          <span className="w-6 h-[2px] bg-white"></span>
+        </button>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="absolute top-20 left-0 w-full bg-[#111] text-gray-200 flex flex-col items-start p-5 space-y-4 lg:hidden z-50 border-t border-gray-700">
+            <a href="#" className="text-yellow-500">Home</a>
+            <a href="#" className="hover:text-yellow-500">Pages</a>
+            <a href="#" className="hover:text-yellow-500">Services</a>
+            <a href="#" className="hover:text-yellow-500">Repair</a>
+            <a href="#" className="hover:text-yellow-500">Performance</a>
+            <a href="#" className="hover:text-yellow-500">Contact</a>
+          </div>
+        )}
+      </nav>
     </header>
   );
-}
+};
+
+export default Navbar;
