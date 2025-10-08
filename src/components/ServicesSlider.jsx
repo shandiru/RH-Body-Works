@@ -1,115 +1,176 @@
-import React from "react";
+'use client';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
-  FaPlane,
-  FaShip,
-  FaTruck,
-  FaWarehouse,
-  FaTrain,
-  FaRocket,
+  FaSprayCan,
+  FaTools,
+  FaCog,
+  FaWrench,
+  FaCarSide,
+  FaPrint,
+  FaFireExtinguisher,
+  FaTruckPickup,
+  FaHammer,
+  FaCogs,
 } from "react-icons/fa";
 
 const services = [
   {
-    title: "Air Transportation",
-    desc: "Transport reconceptualize ubiquitous solution wherea market-driven expertise. Synergistically empower parallel processes with highly efficient infomediaries.",
-    icon: FaPlane,
-    href: "#",
+    title: "Full Body Resprays",
+    desc: "Transform your vehicle’s appearance with high-quality paint finishes. Our expert technicians ensure a flawless, showroom-quality respray that restores brilliance and protection.",
+    icon: FaSprayCan,
   },
   {
-    title: "Road Transportation",
-    desc: "Reconceptualize energistically ubiquitous solution wherea market-driven expertise. Synergistically empower parallel processes with highly efficient infomediaries.",
-    icon: FaTruck,
-    href: "#",
+    title: "Accident Repair",
+    desc: "From minor dents to major collision damage, we provide complete accident repair solutions using modern techniques to bring your vehicle back to life safely and beautifully.",
+    icon: FaTools,
   },
   {
-    title: "Sea Transportation",
-    desc: "Energistically reconceptualize ubiquitous solution wherea market-driven expertise. Synergistically empower parallel processes with highly efficient infomediaries.",
-    icon: FaShip,
-    href: "#",
+    title: "Alloy Wheel Repairs",
+    desc: "Restore scratched, cracked, or corroded alloy wheels with precision. We deliver factory-finish results and ensure your wheels look and perform like new.",
+    icon: FaCog,
   },
   {
-    title: "Warehousing",
-    desc: "Modern warehousing services with real-time inventory visibility, secure storage, and value-added distribution support.",
-    icon: FaWarehouse,
-    href: "#",
+    title: "3D Printing Service",
+    desc: "Our advanced 3D printing allows fast, accurate fabrication of rare or custom car parts — ensuring perfect fits and cost-efficient solutions for restorations and modifications.",
+    icon: FaPrint,
   },
   {
-    title: "Rail Freight",
-    desc: "Sustainable and efficient railway cargo services for bulk and long-haul goods transportation.",
-    icon: FaTrain,
-    href: "#",
+    title: "Classic Restoration",
+    desc: "Preserve the heritage and beauty of your vintage vehicle. We specialize in meticulous restorations, combining craftsmanship with modern technology for lasting quality.",
+    icon: FaCarSide,
   },
   {
-    title: "Space Logistics",
-    desc: "Cutting-edge logistics for satellite and space cargo missions—future-ready and reliable.",
-    icon: FaRocket,
-    href: "#",
+    title: "Welding Repairs",
+    desc: "Structural integrity restored. Our certified welders perform body and frame repairs with precision and durability to keep your car strong and road-ready.",
+    icon: FaHammer,
+  },
+  {
+    title: "Camper Van Repairs",
+    desc: "From mechanical fixes to interior refurbishments, our camper van repair experts keep your adventures rolling with dependable, high-quality service.",
+    icon: FaTruckPickup,
+  },
+  {
+    title: "Motorhome Repairs",
+    desc: "Specialized care for motorhomes of all sizes — covering exterior panels, plumbing, electrical, and mechanical systems for long-lasting travel comfort.",
+    icon: FaCogs,
+  },
+  {
+    title: "MOT Repairs",
+    desc: "Quick, compliant MOT repairs that get your vehicle back on the road fast. We handle diagnostics, emissions, and safety checks with precision and transparency.",
+    icon: FaWrench,
+  },
+  {
+    title: "Shot Blasting",
+    desc: "Prepare metal surfaces for painting or restoration with professional shot blasting. Remove rust, paint, and grime for a clean, even foundation.",
+    icon: FaFireExtinguisher,
   },
 ];
 
 export default function Services() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: false,
+      mirror: true,
+    });
+  }, []);
+
   return (
-    <section className="bg-white py-16 px-4" id="services">
+    <section
+      className="bg-white py-20 px-6"
+      id="services"
+      style={{ fontFamily: '"Manrope", sans-serif' }}
+    >
       <div className="mx-auto max-w-7xl">
-        {/* Eyebrow */}
-        <div className="flex items-center justify-center gap-3">
-          <span className="h-[2px] w-16 bg-blue-600/40" />
-          <span className="text-xs font-extrabold tracking-[0.2em] text-blue-700">
-            OUR SERVICES
+        {/* Section Label */}
+        <div
+          className="flex items-center justify-center gap-3"
+          data-aos="fade-down"
+        >
+          <span className="h-[2px] w-16 bg-[#185CFF]/40" />
+          <span className="text-xs font-extrabold tracking-[0.2em] text-[#185CFF] uppercase">
+            Our Services
           </span>
-          <span className="h-[2px] w-16 bg-blue-600/40" />
+          <span className="h-[2px] w-16 bg-[#185CFF]/40" />
         </div>
 
         {/* Heading */}
-        <h2 className="mt-3 text-center text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
+        <h2
+          className="mt-3 text-center text-4xl md:text-5xl font-extrabold text-gray-900"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
           Explore Our Services
         </h2>
+        <p
+          className="mt-4 text-center text-gray-600 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          We provide a full range of automotive repair and restoration services —
+          blending craftsmanship, technology, and care to keep your vehicle in
+          its best condition.
+        </p>
 
-        {/* Cards */}
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-24 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Service Cards */}
+        <div
+          className="mt-16 grid grid-cols-1 gap-x-10 gap-y-20 sm:grid-cols-2 lg:grid-cols-3"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
-              <article key={i} className="h-full">
-                <div className="relative min-h-[420px] max-w-[320px] mx-auto rounded-2xl bg-white shadow-md ring-1 ring-slate-200 transition hover:shadow-lg">
-                  {/* Circle Icon */}
-                  <div className="absolute left-6 -top-10 z-20">
-                    <div className="grid h-28 w-28 place-items-center rounded-full bg-blue-600 text-white shadow-lg ring-4 ring-white">
-                      <Icon className="h-12 w-12" />
-                    </div>
-                  </div>
-
-                  {/* Watermark */}
-                  <div className="pointer-events-none absolute inset-0">
-                    <div className="absolute right-6 top-10 text-blue-700/10">
-                      <Icon className="h-40 w-40" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10 px-7 pt-20 text-left">
-                    <h3 className="text-2xl font-extrabold text-slate-900">
-                      {s.title}
-                    </h3>
-                    <p className="mt-3 text-slate-600 leading-7">
-                      {s.desc}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="relative z-10 mx-7 my-7 h-px bg-slate-200" />
-
-                  {/* Read More */}
-                  <div className="relative z-10 px-7 pb-7">
-                    <a
-                      href={s.href}
-                      className="font-semibold uppercase tracking-wide text-slate-900 underline underline-offset-[6px] decoration-slate-400 hover:decoration-blue-600"
-                    >
-                      Read More
-                    </a>
+              <div
+                key={i}
+                className="relative max-w-[350px] mx-auto bg-white rounded-2xl shadow-md ring-1 ring-gray-200 
+                  transition-all duration-500 ease-out 
+                  hover:shadow-[0_10px_30px_rgba(24,92,255,0.25)] hover:-translate-y-2
+                  active:scale-[0.98] active:shadow-[0_6px_20px_rgba(24,92,255,0.35)]"
+                data-aos="zoom-in-up"
+                data-aos-delay={i * 100}
+              >
+                {/* Main Icon */}
+                <div className="absolute left-6 -top-10">
+                  <div className="grid h-24 w-24 place-items-center rounded-full bg-[#185CFF] text-white shadow-lg ring-4 ring-white transition-all duration-500 ease-out group-hover:shadow-[0_0_25px_rgba(24,92,255,0.5)]">
+                    <Icon className="h-10 w-10" />
                   </div>
                 </div>
-              </article>
+
+                {/* Watermark Icon */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute right-6 top-10 text-[#185CFF]/10">
+                    <Icon className="h-36 w-36" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 px-7 pt-20 pb-10 text-left">
+                  <h3 className="text-2xl font-extrabold text-gray-900 mb-3 transition-colors duration-300 ease-out hover:text-[#185CFF]">
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {s.desc}
+                  </p>
+                </div>
+
+                {/* Divider */}
+                <div className="relative z-10 mx-7 h-px bg-gray-200" />
+
+                {/* Read More */}
+                <div className="relative z-10 px-7 py-5">
+                  <a
+                    href="#"
+                    className="font-semibold uppercase text-sm tracking-wide text-gray-900 underline underline-offset-[6px] decoration-gray-300 
+                      hover:text-[#185CFF] hover:decoration-[#185CFF] transition-colors duration-300 ease-out"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
             );
           })}
         </div>

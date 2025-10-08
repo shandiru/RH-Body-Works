@@ -7,6 +7,7 @@ import About from "./components/AboutSection"
 import ServicesSlider from "./components/ServicesSlider";
 import Testimonials from "./components/Testimonials";
 import WhyChooseUs from "../src/components/WhyChooseUs"
+import Footer from "../src/components/Footer"
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
       <ServicesSlider />
       <WhyChooseUs />
       <Testimonials />
+      <Footer />
     </>
   );
 }
