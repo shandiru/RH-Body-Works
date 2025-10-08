@@ -25,25 +25,24 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-[#0f0f0f] text-white py-28 px-6 md:px-16 lg:px-28 relative overflow-hidden">
+    <section className="bg-white text-gray-900 py-28 px-6 md:px-16 lg:px-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-[1.3fr_2fr] gap-20 items-center">
-
         {/* LEFT SIDE - Heading + 90% Visual */}
         <div className="relative flex flex-col items-center md:items-start text-center md:text-left">
           {/* Animated Glow Circle */}
-          <div className="absolute -z-0 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl top-0 left-1/2 -translate-x-1/2 md:left-16 md:-translate-x-0"></div>
+          <div className="absolute -z-0 w-72 h-72 bg-[#185CFF]/10 rounded-full blur-3xl top-0 left-1/2 -translate-x-1/2 md:left-16 md:-translate-x-0"></div>
 
           <div className="relative z-10 space-y-8">
             {/* Heading Section */}
             <div>
-              <p className="text-gray-400 uppercase text-sm tracking-wide mb-2">
+              <p className="text-gray-500 uppercase text-sm tracking-wide mb-2">
                 Why Choose Us?
               </p>
               <h2 className="text-4xl md:text-5xl font-extrabold leading-snug mb-4">
                 Unmatched Quality, Precision, And{" "}
-                <span className="text-yellow-400">Care for Your Car</span>
+                <span className="text-[#185CFF]">Care for Your Car</span>
               </h2>
-              <p className="text-gray-300 text-base leading-relaxed max-w-[360px]">
+              <p className="text-gray-600 text-base leading-relaxed max-w-[360px]">
                 We deliver unmatched quality, precision, and care in every car
                 detailing service we provide. From meticulous cleaning to expert
                 polishing, every detail is handled with professionalism to ensure
@@ -54,20 +53,20 @@ const WhyChooseUs = () => {
             {/* 90% Visual */}
             <div className="mt-8 relative flex flex-col items-center md:items-start">
               <div className="relative">
-                <h3 className="text-yellow-400 text-[140px] md:text-[160px] font-extrabold leading-none animate-pulse drop-shadow-[0_0_20px_rgba(234,179,8,0.6)]">
+                <h3 className="text-[#185CFF] text-[140px] md:text-[160px] font-extrabold leading-none animate-pulse drop-shadow-[0_0_20px_rgba(24,92,255,0.5)]">
                   90%
                 </h3>
-                <div className="absolute -inset-6 rounded-full border border-yellow-400/30 blur-sm"></div>
+                <div className="absolute -inset-6 rounded-full border border-[#185CFF]/30 blur-sm"></div>
               </div>
 
-              <p className="text-gray-300 text-lg leading-relaxed max-w-[330px] mt-4">
-                <span className="font-semibold text-white">
+              <p className="text-gray-700 text-lg leading-relaxed max-w-[330px] mt-4">
+                <span className="font-semibold text-gray-900">
                   Many have felt the pleasure
                 </span>{" "}
                 of our service and many have entrusted their vehicles to us.
               </p>
 
-              <div className="mt-6 w-28 h-[3px] bg-gradient-to-r from-yellow-400 to-transparent md:ml-0 mx-auto"></div>
+              <div className="mt-6 w-28 h-[3px] bg-gradient-to-r from-[#185CFF] to-transparent md:ml-0 mx-auto"></div>
             </div>
           </div>
         </div>
@@ -77,18 +76,18 @@ const WhyChooseUs = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group bg-[#1a1a1a] border border-gray-800 rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-[0_0_25px_rgba(234,179,8,0.3)]"
+              className="group bg-gray-50 border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#185CFF] hover:shadow-[0_0_25px_rgba(24,92,255,0.2)]"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-yellow-400 font-bold text-lg">
+                <span className="text-[#185CFF] font-bold text-lg">
                   {feature.id}
                 </span>
-                <span className="w-10 h-[2px] bg-gray-700 group-hover:bg-yellow-400 transition"></span>
+                <span className="w-10 h-[2px] bg-gray-300 group-hover:bg-[#185CFF] transition"></span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-yellow-400 transition-colors">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-[#185CFF] transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed text-sm">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 {feature.text}
               </p>
             </div>
