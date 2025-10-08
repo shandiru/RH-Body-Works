@@ -1,11 +1,8 @@
-'use client';
+"use client";
 import React, { useState } from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FiPhone, FiMapPin } from "react-icons/fi";
+import ThemeToggle from "./ThemeToggle"; // Import your ThemeToggle component
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,19 +15,19 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-white text-gray-900 w-full shadow-md">
+    <header className="bg-white dark:bg-[#0d1117] text-gray-900 dark:text-gray-100 w-full shadow-md transition-colors duration-500">
       {/* === Top Bar === */}
-      <div className="border-b border-gray-200 text-sm flex flex-col md:flex-row justify-between items-center px-6 md:px-14 py-2 bg-white">
-        <div className="flex items-center gap-3 text-gray-600">
+      <div className="border-b border-gray-200 dark:border-gray-700 text-sm flex flex-col md:flex-row justify-between items-center px-6 md:px-14 py-2 bg-white dark:bg-[#161b22] transition-colors duration-500">
+        <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
           <span>Follow us</span>
-          <div className="flex gap-3 text-gray-800">
+          <div className="flex gap-3 text-gray-800 dark:text-gray-200">
             <FaFacebookF className="hover:text-[#185CFF] cursor-pointer transition-colors duration-200" />
             <FaTwitter className="hover:text-[#185CFF] cursor-pointer transition-colors duration-200" />
             <FaYoutube className="hover:text-[#185CFF] cursor-pointer transition-colors duration-200" />
           </div>
         </div>
 
-        <div className="flex items-center gap-5 text-gray-600 mt-2 md:mt-0">
+        <div className="flex items-center gap-5 text-gray-600 dark:text-gray-300 mt-2 md:mt-0">
           <div className="flex items-center gap-1">
             <FiPhone className="text-[#185CFF]" />
             <span>+123 456 789</span>
@@ -43,7 +40,7 @@ const Navbar = () => {
       </div>
 
       {/* === Main Navbar === */}
-      <nav className="flex justify-between items-center px-6 md:px-14 py-5 bg-white relative">
+      <nav className="flex justify-between items-center px-6 md:px-14 py-5 relative bg-white dark:bg-[#0d1117] transition-colors duration-500">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 rounded-full border-2 border-[#185CFF] flex items-center justify-center">
@@ -55,7 +52,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center space-x-10 font-medium text-gray-800">
+        <ul className="hidden lg:flex items-center space-x-10 font-medium text-gray-800 dark:text-gray-200">
           {menuItems.map((item, index) => (
             <li
               key={index}
@@ -67,26 +64,31 @@ const Navbar = () => {
               >
                 {item.name}
               </a>
-              {/* Underline animation */}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#185CFF] rounded-full group-hover:w-full transition-all duration-300"></span>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden flex flex-col gap-1 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className="w-6 h-[2px] bg-gray-900"></span>
-          <span className="w-6 h-[2px] bg-gray-900"></span>
-          <span className="w-6 h-[2px] bg-gray-900"></span>
-        </button>
+        {/* Right Section */}
+        <div className="flex items-center gap-4">
+          {/* Theme Toggle */}
+          <ThemeToggle className="text-gray-900 dark:text-gray-100" />
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden flex flex-col gap-1 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className="w-6 h-[2px] bg-gray-900 dark:bg-gray-100"></span>
+            <span className="w-6 h-[2px] bg-gray-900 dark:bg-gray-100"></span>
+            <span className="w-6 h-[2px] bg-gray-900 dark:bg-gray-100"></span>
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-20 left-0 w-full bg-white text-gray-800 flex flex-col items-start p-6 space-y-4 lg:hidden z-50 border-t border-gray-200 shadow-lg">
+          <div className="absolute top-20 left-0 w-full bg-white dark:bg-[#161b22] text-gray-800 dark:text-gray-100 flex flex-col items-start p-6 space-y-4 lg:hidden z-50 border-t border-gray-200 dark:border-gray-700 shadow-lg transition-colors duration-500">
             {menuItems.map((item, index) => (
               <a
                 key={index}

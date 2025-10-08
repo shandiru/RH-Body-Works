@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
 
   return (
     <section
-      className="bg-white text-gray-900 py-28 px-6 md:px-16 lg:px-28 relative overflow-hidden"
+      className="bg-white dark:bg-[#0d1117] text-gray-900 dark:text-gray-200 py-28 px-6 md:px-16 lg:px-28 relative overflow-hidden"
       id="why-choose-us"
       style={{ fontFamily: '"Manrope", sans-serif' }}
     >
@@ -54,14 +54,14 @@ const WhyChooseUs = () => {
           <div className="relative z-10 space-y-8">
             {/* Heading */}
             <div data-aos="fade-up" data-aos-delay="100">
-              <p className="text-gray-500 uppercase text-sm tracking-wide mb-2">
+              <p className="text-gray-500 dark:text-gray-400 uppercase text-sm tracking-wide mb-2">
                 Why Choose Us?
               </p>
               <h2 className="text-4xl md:text-5xl font-extrabold leading-snug mb-4">
                 Unmatched Quality, Precision, And{' '}
                 <span className="text-[#185CFF]">Care for Your Car</span>
               </h2>
-              <p className="text-gray-600 text-base leading-relaxed max-w-[360px] mx-auto md:mx-0">
+              <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed max-w-[360px] mx-auto md:mx-0">
                 We deliver unmatched quality, precision, and care in every car
                 detailing service we provide. From meticulous cleaning to expert
                 polishing, every detail is handled with professionalism to ensure
@@ -83,11 +83,11 @@ const WhyChooseUs = () => {
               </div>
 
               <p
-                className="text-gray-700 text-lg leading-relaxed max-w-[330px] mt-4"
+                className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed max-w-[330px] mt-4"
                 data-aos="fade-up"
                 data-aos-delay="500"
               >
-                <span className="font-semibold text-gray-900">
+                <span className="font-semibold text-gray-900 dark:text-white">
                   Many have felt the pleasure
                 </span>{' '}
                 of our service and many have entrusted their vehicles to us.
@@ -107,7 +107,7 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className="group bg-gray-50 border border-gray-200 rounded-xl p-8 transition-all duration-500 ease-out
+              className="group bg-gray-50 dark:bg-[#181818] border border-gray-200 dark:border-gray-700 rounded-xl p-8 transition-all duration-500 ease-out
                 hover:-translate-y-2 hover:border-[#185CFF] hover:shadow-[0_0_30px_rgba(24,92,255,0.25)]
                 active:scale-[0.98] active:shadow-[0_0_20px_rgba(24,92,255,0.35)]"
               data-aos="zoom-in"
@@ -117,12 +117,12 @@ const WhyChooseUs = () => {
                 <span className="text-[#185CFF] font-bold text-lg">
                   {feature.id}
                 </span>
-                <span className="w-10 h-[2px] bg-gray-300 group-hover:bg-[#185CFF] transition-all duration-500 ease-out"></span>
+                <span className="w-10 h-[2px] bg-gray-300 dark:bg-gray-600 group-hover:bg-[#185CFF] transition-all duration-500 ease-out"></span>
               </div>
               <h3 className="text-xl font-semibold mb-2 group-hover:text-[#185CFF] transition-colors duration-300 ease-out">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                 {feature.text}
               </p>
             </div>

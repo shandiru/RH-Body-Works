@@ -14,11 +14,11 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section className="bg-white" id="about">
+    <section className="bg-white dark:bg-[#0d1117] text-gray-900 dark:text-gray-100" id="about">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-2 lg:py-24">
         {/* LEFT: image + badge */}
         <div className="relative" data-aos="zoom-in-up">
-          <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-100" data-aos="fade-up">
+          <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-slate-100 dark:ring-slate-700" data-aos="fade-up">
             <img
               src="hero.jpg"
               alt="Our showroom"
@@ -29,14 +29,14 @@ export default function AboutSection() {
 
           {/* Blue badge */}
           <div
-            className="absolute -right-6 top-6 grid h-28 w-28 place-items-center rounded-full bg-white shadow-xl"
+            className="absolute -right-6 top-6 grid h-28 w-28 place-items-center rounded-full bg-white dark:bg-neutral-800 shadow-xl"
             data-aos="fade-left"
             data-aos-delay="300"
           >
-            <div className="grid h-24 w-24 place-items-center rounded-full border-[6px] border-blue-500">
+            <div className="grid h-24 w-24 place-items-center rounded-full border-[6px] border-blue-500 dark:border-blue-400">
               <div className="px-2 text-center leading-tight">
-                <div className="text-2xl font-extrabold text-blue-600">1k+</div>
-                <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-slate-700">
+                <div className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">1k+</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-slate-700 dark:text-slate-300">
                   Best Car
                   <br />
                   Dealer Award
@@ -54,16 +54,16 @@ export default function AboutSection() {
             data-aos="fade-down"
             data-aos-delay="100"
           >
-            <span className="h-px flex-1 max-w-[50px] bg-blue-500 opacity-50" />
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-600 text-center whitespace-nowrap">
+            <span className="h-px flex-1 max-w-[50px] bg-blue-500 opacity-50 dark:bg-blue-400" />
+            <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 text-center whitespace-nowrap">
               About Our Company
             </span>
-            <span className="h-px flex-1 max-w-[50px] bg-blue-500 opacity-50" />
+            <span className="h-px flex-1 max-w-[50px] bg-blue-500 opacity-50 dark:bg-blue-400" />
           </div>
 
           {/* Heading */}
           <h2
-            className="text-3xl font-extrabold leading-tight text-slate-900 text-center lg:text-left sm:text-4xl"
+            className="text-3xl font-extrabold leading-tight text-slate-900 dark:text-white text-center lg:text-left sm:text-4xl"
             data-aos="fade-up"
             data-aos-delay="150"
           >
@@ -72,7 +72,7 @@ export default function AboutSection() {
 
           {/* Paragraph */}
           <p
-            className="mt-4 max-w-xl text-slate-600 text-center lg:text-left"
+            className="mt-4 max-w-xl text-slate-600 dark:text-slate-300 text-center lg:text-left"
             data-aos="fade-up"
             data-aos-delay="250"
           >
@@ -101,10 +101,10 @@ export default function AboutSection() {
                 data-aos="fade-up"
                 data-aos-delay={500 + index * 100}
               >
-                <span className="inline-grid h-7 w-7 place-items-center rounded-full bg-blue-50 ring-1 ring-blue-200">
+                <span className="inline-grid h-7 w-7 place-items-center rounded-full bg-blue-50 ring-1 ring-blue-200 dark:bg-blue-900 dark:ring-blue-700">
                   <svg
                     viewBox="0 0 20 20"
-                    className="h-4 w-4 text-blue-600"
+                    className="h-4 w-4 text-blue-600 dark:text-blue-400"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2.2"
@@ -117,7 +117,7 @@ export default function AboutSection() {
                     />
                   </svg>
                 </span>
-                <span className="text-sm font-medium text-slate-800">
+                <span className="text-sm font-medium text-slate-800 dark:text-slate-300">
                   {item}
                 </span>
               </div>
@@ -126,7 +126,7 @@ export default function AboutSection() {
 
           {/* Divider */}
           <div
-            className="mt-6 h-px w-full bg-slate-200"
+            className="mt-6 h-px w-full bg-slate-200 dark:bg-slate-700"
             data-aos="fade-up"
             data-aos-delay="900"
           />
@@ -139,16 +139,16 @@ export default function AboutSection() {
           >
             <a
               href="#about"
-              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 text-white font-semibold px-6 py-3 shadow-sm transition hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600"
             >
               Learn More
             </a>
 
             <div className="flex items-center gap-3 text-sm">
-              <span className="inline-grid h-10 w-10 place-items-center rounded-full bg-white ring-2 ring-blue-400">
+              <span className="inline-grid h-10 w-10 place-items-center rounded-full bg-white dark:bg-neutral-800 ring-2 ring-blue-400 dark:ring-blue-500">
                 <svg
                   viewBox="0 0 24 24"
-                  className="h-5 w-5 text-blue-600"
+                  className="h-5 w-5 text-blue-600 dark:text-blue-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -181,16 +181,16 @@ export default function AboutSection() {
               </span>
 
               <div>
-                <div className="text-slate-700">
+                <div className="text-slate-700 dark:text-slate-300">
                   Have queries? Click below link
                 </div>
                 <a
                   href="#faqs"
-                  className="group inline-flex items-center gap-2 font-semibold text-blue-700 hover:text-blue-800"
+                  className="group inline-flex items-center gap-2 font-semibold text-blue-700 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
                 >
                   <svg
                     viewBox="0 0 24 24"
-                    className="h-4 w-4 text-blue-600 transition-transform group-hover:-translate-x-0.5"
+                    className="h-4 w-4 text-blue-600 transition-transform group-hover:-translate-x-0.5 dark:text-blue-400 dark:group-hover:text-blue-300"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"

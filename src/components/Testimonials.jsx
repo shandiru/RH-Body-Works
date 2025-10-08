@@ -34,9 +34,7 @@ function Star({ filled = true }) {
   return (
     <svg
       viewBox="0 0 20 20"
-      className={`h-4 w-4 ${
-        filled ? 'fill-[#185CFF]' : 'fill-[#D8E3FF]'
-      } transition-all duration-200`}
+      className={`h-4 w-4 ${filled ? 'fill-[#185CFF]' : 'fill-[#D8E3FF]'}`}
       aria-hidden="true"
     >
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.2 3.69a1 1 0 0 0 .95.69h3.879c.967 0 1.371 1.24.588 1.81l-3.138 2.279a1 1 0 0 0-.364 1.118l1.2 3.69c.3.921-.755 1.688-1.54 1.118L10.5 14.347a1 1 0 0 0-1.176 0l-3.246 2.975c-.785.57-1.84-.197-1.54-1.118l1.2-3.69a1 1 0 0 0-.364-1.118L2.236 9.117c-.783-.57-.379-1.81.588-1.81h3.88a1 1 0 0 0 .949-.69l1.396-3.69Z" />
@@ -71,7 +69,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
 
   return (
     <section
-      className="relative overflow-hidden bg-white py-20 sm:py-24"
+      className="relative overflow-hidden bg-white dark:bg-[#0d1117] py-20 sm:py-24"
       style={{ fontFamily: '"Manrope", sans-serif' }}
       id="testimonials"
     >
@@ -90,7 +88,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
 
         {/* Heading */}
         <h2
-          className="text-center text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight"
+          className="text-center text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight"
           data-aos="fade-up"
           data-aos-delay="150"
         >
@@ -100,7 +98,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
 
         {/* Testimonial Card */}
         <div
-          className="relative mx-auto mt-12 w-full max-w-4xl rounded-2xl bg-[#185CFF] px-6 py-16 md:py-20 text-center text-white shadow-xl sm:px-10 flex items-center"
+          className="relative mx-auto mt-12 w-full max-w-4xl rounded-2xl bg-[#185CFF] dark:bg-[#185CFF] px-6 py-16 md:py-20 text-center text-white shadow-xl sm:px-10 flex items-center"
           data-aos="zoom-in-up"
           data-aos-delay="300"
         >
@@ -133,7 +131,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
               <Star key={i} filled={i < t.stars} />
             ))}
           </div>
-          <div className="text-sm font-extrabold tracking-wider text-gray-900">
+          <div className="text-sm font-extrabold tracking-wider text-gray-900 dark:text-gray-100">
             {t.name}
           </div>
           <div className="text-sm text-[#185CFF] font-semibold">{t.role}</div>
@@ -164,7 +162,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
       <button
         onClick={prev}
         aria-label="Previous"
-        className="group absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-gray-800 shadow-md hover:shadow-lg hover:text-[#185CFF] transition-all duration-500 ease-out active:scale-95"
+        className="group absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 dark:bg-[#0d1117]/90 p-3 text-gray-800 dark:text-gray-100 shadow-md hover:shadow-lg hover:text-[#185CFF] transition-all duration-500 ease-out active:scale-95"
         data-aos="fade-right"
       >
         <svg viewBox="0 0 20 20" className="h-5 w-5">
@@ -182,7 +180,7 @@ export default function Testimonials({ brand = 'Carent', auto = true, interval =
       <button
         onClick={next}
         aria-label="Next"
-        className="group absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-gray-800 shadow-md hover:shadow-lg hover:text-[#185CFF] transition-all duration-500 ease-out active:scale-95"
+        className="group absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 dark:bg-[#0d1117]/90 p-3 text-gray-800 dark:text-gray-100 shadow-md hover:shadow-lg hover:text-[#185CFF] transition-all duration-500 ease-out active:scale-95"
         data-aos="fade-left"
       >
         <svg viewBox="0 0 20 20" className="h-5 w-5">

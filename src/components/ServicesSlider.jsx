@@ -80,7 +80,7 @@ export default function Services() {
 
   return (
     <section
-      className="bg-white py-20 px-6"
+      className="bg-white dark:bg-[#0d1117] py-20 px-6"
       id="services"
       style={{ fontFamily: '"Manrope", sans-serif' }}
     >
@@ -90,23 +90,23 @@ export default function Services() {
           className="flex items-center justify-center gap-3"
           data-aos="fade-down"
         >
-          <span className="h-[2px] w-16 bg-[#185CFF]/40" />
-          <span className="text-xs font-extrabold tracking-[0.2em] text-[#185CFF] uppercase">
+          <span className="h-[2px] w-16 bg-[#185CFF]/40 dark:bg-[#185CFF]/60" />
+          <span className="text-xs font-extrabold tracking-[0.2em] text-[#185CFF] dark:text-[#185CFF] uppercase">
             Our Services
           </span>
-          <span className="h-[2px] w-16 bg-[#185CFF]/40" />
+          <span className="h-[2px] w-16 bg-[#185CFF]/40 dark:bg-[#185CFF]/60" />
         </div>
 
         {/* Heading */}
         <h2
-          className="mt-3 text-center text-4xl md:text-5xl font-extrabold text-gray-900"
+          className="mt-3 text-center text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white"
           data-aos="fade-up"
           data-aos-delay="150"
         >
           Explore Our Services
         </h2>
         <p
-          className="mt-4 text-center text-gray-600 max-w-2xl mx-auto"
+          className="mt-4 text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="300"
         >
@@ -126,7 +126,7 @@ export default function Services() {
             return (
               <div
                 key={i}
-                className="relative max-w-[350px] mx-auto bg-white rounded-2xl shadow-md ring-1 ring-gray-200 
+                className="relative max-w-[350px] mx-auto bg-white dark:bg-[#181818] rounded-2xl shadow-md ring-1 ring-gray-200 dark:ring-gray-700
                   transition-all duration-500 ease-out 
                   hover:shadow-[0_10px_30px_rgba(24,92,255,0.25)] hover:-translate-y-2
                   active:scale-[0.98] active:shadow-[0_6px_20px_rgba(24,92,255,0.35)]"
@@ -135,36 +135,36 @@ export default function Services() {
               >
                 {/* Main Icon */}
                 <div className="absolute left-6 -top-10">
-                  <div className="grid h-24 w-24 place-items-center rounded-full bg-[#185CFF] text-white shadow-lg ring-4 ring-white transition-all duration-500 ease-out group-hover:shadow-[0_0_25px_rgba(24,92,255,0.5)]">
+                  <div className="grid h-24 w-24 place-items-center rounded-full bg-[#185CFF] text-white shadow-lg ring-4 ring-white dark:ring-[#185CFF] transition-all duration-500 ease-out group-hover:shadow-[0_0_25px_rgba(24,92,255,0.5)]">
                     <Icon className="h-10 w-10" />
                   </div>
                 </div>
 
                 {/* Watermark Icon */}
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute right-6 top-10 text-[#185CFF]/10">
+                  <div className="absolute right-6 top-10 text-[#185CFF]/10 dark:text-[#185CFF]/20">
                     <Icon className="h-36 w-36" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10 px-7 pt-20 pb-10 text-left">
-                  <h3 className="text-2xl font-extrabold text-gray-900 mb-3 transition-colors duration-300 ease-out hover:text-[#185CFF]">
+                  <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-3 transition-colors duration-300 ease-out hover:text-[#185CFF]">
                     {s.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                     {s.desc}
                   </p>
                 </div>
 
                 {/* Divider */}
-                <div className="relative z-10 mx-7 h-px bg-gray-200" />
+                <div className="relative z-10 mx-7 h-px bg-gray-200 dark:bg-gray-700" />
 
                 {/* Read More */}
                 <div className="relative z-10 px-7 py-5">
                   <a
                     href="#"
-                    className="font-semibold uppercase text-sm tracking-wide text-gray-900 underline underline-offset-[6px] decoration-gray-300 
+                    className="font-semibold uppercase text-sm tracking-wide text-gray-900 dark:text-white underline underline-offset-[6px] decoration-gray-300 dark:decoration-gray-500 
                       hover:text-[#185CFF] hover:decoration-[#185CFF] transition-colors duration-300 ease-out"
                   >
                     Read More
